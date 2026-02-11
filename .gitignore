@@ -1,22 +1,18 @@
-# Datasets & media
-datasets/
-videos/
-outputs/
+# Videos
+*.mp4
+*.avi
+*.mov
 
-# Models & checkpoints
-models/
+# Models
 *.pt
 *.pth
 *.h5
 
+# Data folders
+datasets/
+videos/
+outputs/
+
 # Python cache
 __pycache__/
 *.pyc
-
-# Virtual environments
-venv/
-.env
-
-# OS junk
-.DS_Store
-Thumbs.db

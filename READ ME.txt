@@ -1,0 +1,48 @@
+SKI LIFT TRACKING
+by: Talon Finehout
+
+Overview
+This project uses a custom-trained YOLO11n model to detect and track people in ski lift lines across three provided videos. The model runs with OpenCV, allowing the user to select a region of interest (ROI) for focused tracking. You can visualize tracking activity, unique person counts, and average time spent in the ROI.
+
+Included Files
+blackcomb_short.mp4
+blackcomb_long.mp4
+parkcity.mp4
+final_train_model.py – Script to train a new YOLO model
+final_opencv.py – Script to run video tracking with OpenCV
+Final_Project/ – Folder containing trained model weights
+
+Requirements
+To use this project, you must install the Ultralytics YOLO11 library. Follow the official guide here:
+https://github.com/ultralytics/ultralytics?tab=readme-ov-file
+
+You will also need numpy, cv2 - OpenCV, and collection to use defualtdict 
+
+How to Train a New Model (Optional):
+Open final_train_model.py
+Run the script to train a new model using your dataset.
+The trained model will be saved to the Final_Project folder.
+Only retrain if you want to update or modify the current model.
+
+How to Run the Tracker:
+Open and run final_opencv.py.
+When prompted, choose a video:
+1 = blackcomb_short.mp4
+2 = parkcity.mp4
+3 = blackcomb_long.mp4
+(Blank = defaults to blackcomb_short)
+
+The video will begin playing.
+Press p to pause the video and select a Region of Interest (ROI) using 4 mouse clicks.
+It's recommended to click top-left → top-right → bottom-right → bottom-left for best ROI accuracy.
+To reset the ROI, press r while paused.
+Press q to quit.
+
+Features:
+Tracks only people (class 0) inside the selected ROI.
+
+Displays:
+Bounding boxes with unique IDs and time spent in ROI.
+Count of unique tracked people over the past second.
+Average time spent per person in the ROI.
+Real-time updates and interaction using OpenCV.
