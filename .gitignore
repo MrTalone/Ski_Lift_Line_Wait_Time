@@ -1,0 +1,22 @@
+# Datasets & media
+datasets/
+videos/
+outputs/
+
+# Models & checkpoints
+models/
+*.pt
+*.pth
+*.h5
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+.env
+
+# OS junk
+.DS_Store
+Thumbs.db
